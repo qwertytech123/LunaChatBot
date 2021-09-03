@@ -1,4 +1,4 @@
-# Official Arch Linux Docker Image
+# Official Arch Linux Doocker Image
 FROM archlinux:base-devel
 
 # Installing Python
