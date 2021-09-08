@@ -22,6 +22,7 @@ luna = Client(
 bot_id = int(bot_token.split(":")[0])
 arq = None
 
+
 async def lunaQuery(query: str, user_id: int):
     query = (
         query
@@ -47,7 +48,6 @@ async def type_and_send(message):
     await message.reply_text(response)
     await message._client.send_chat_action(chat_id, "cancel")
 
-
 async def chat(_, message):
     if message.reply_to_message:
         if not message.reply_to_message.from_user:
@@ -65,6 +65,8 @@ async def chat(_, message):
             return
     await type_and_send(message)
 
+
+
 async def main():
     global arq
     session = ClientSession()
@@ -74,7 +76,7 @@ async def main():
     print(
         """
 -----------------
-| Rias Started! |
+| Luna Started! |
 -----------------
 """
     )
