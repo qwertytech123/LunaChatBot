@@ -1,1 +1,1 @@
-worker: python3 luna.py
+process: python3 luna.py
