@@ -7,7 +7,7 @@ from pyrogram import Client, filters, idle
 from Python_ARQ import ARQ
 
 bot_token = "1964873608:AAFR2nWYJORCfoSjJfGB5x_vEQE__PjFdEM"
-ARQ_API_KEY = "PIHVJY-TCWRTN-FRGUHB-QOUFXH-ARQ"
+ARQ_API_KEY = "FUVLFU-ZUKZVO-BQRAAQ-RSSHHM-ARQ"
 ARQ_API_BASE_URL = "https://thearq.tech"
 LANGUAGE = "en"
 
@@ -47,13 +47,6 @@ async def type_and_send(message):
     await message._client.send_chat_action(chat_id, "cancel")
 
 
-@luna.on_message(
-    ~filters.private
-    & filters.text
-    & ~filters.command("help")
-    & ~filters.edited,
-    group=69,
-)
 async def chat(_, message):
     if message.reply_to_message:
         if not message.reply_to_message.from_user:
